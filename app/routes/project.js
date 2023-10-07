@@ -17,6 +17,3 @@ router.get('/project', function(req, res, next) {
 router.get('/service', function(req, res, next) {
   res.render('service', { title: 'Express' });
 });
-router.get("/partials/header", function (req, res, next) {
-  res.render("header", { title: "Header" });
-});
