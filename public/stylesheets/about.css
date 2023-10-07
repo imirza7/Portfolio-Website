@@ -1,0 +1,45 @@
+/* File name: about.css
+Student's name: Ibtesam Mirza.
+Student ID: 301315915.
+Date: Septerber 20th, 2023 */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 220vh;
+    margin: 0;
+    background-color: #282634;
+}
+
+/* Styles the Container*/
+.container {
+    width: 900px;
+    height: 1100px;
+    border-radius: 30px;
+    background: #282634;
+    box-shadow: 15px 15px 30px #131118,
+               -15px -15px 30px #af8ddb;
+    text-align: center;
+}
+
+/* Styles the h1 element*/
+h1 {
+    color:#af8ddb  
+}
+
+/* Styling for the image*/
+img {
+    margin-top: 15px;
+    width: 200px;
+    height: 250px;
+    border: 1px solid #af8ddb;
+}
+
+/* Styling for the PDF */
+#myPDF{
+    width: 800px;
+    height: 500px;
+}
+
+

@@ -1,0 +1,31 @@
+<!-- 
+File name: about.ejs
+Student's name: Ibtesam Mirza.
+Student ID: 301315915.
+Date: Septerber 20th, 2023
+-->
+
+<%- include ('partials/header.ejs') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/about.css">
+    <title>About</title>
+</head>
+<body>
+    <div class="container">
+        <h1>ABOUT ME</h1>
+        <img src="/assets/images/png/Ibtesam.jpg" alt="Ibtesam's Image" id="myIMG">
+        <p>I'm Ibtesam, a software engineering student at Centennial College. 
+         I chose this course because I love problem solving and finding creative solutions to complex problems. 
+         My goal is to become a software engineer that can use my creativity to produce innovative solutions. 
+         In my spare time, I like to read books, explore new cafes, play badminton and take photos. 
+         I'm not a professional photographer, but I appreciate the beauty surrounding me and enjoy capturing the moment.</p>
+        
+        <iframe src = "/assets/Ibtesam Resume PDF.pdf" frameborder="0" id="myPDF"></iframe>
+    </div>
+</body>
+</html>
+<%- include ('partials/footer.ejs') %>

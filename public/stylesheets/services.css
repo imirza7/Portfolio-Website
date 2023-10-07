@@ -1,0 +1,55 @@
+/* File name: services.css
+Student's name: Ibtesam Mirza.
+Student ID: 301315915.
+Date: Septerber 20th, 2023 */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #282634;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #FF4057;
+}
+
+h2{
+    color: #af8ddb;
+}
+
+li{
+    color: #DCDCDC;
+}
+
+/* Styling for the services */
+.container {
+    width: 800px;
+    height: 1000;
+    margin: 20px auto;
+    background-color: #282634;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #af8ddb;
+    text-align: left;
+}
+
+.service {
+    padding: 10px 0;
+    border-bottom: 1px solid #282634;
+}
+
+.service:last-child {
+    border-bottom: none;
+}
+
+.service h2 {
+    font-size: 1.5rem;
+}
+
+.service p {
+    font-size: 1rem;
+}

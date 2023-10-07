@@ -1,0 +1,356 @@
+/* File name: style.css
+Student's name: Ibtesam Mirza.
+Student ID: 301315915.
+Date: Septerber 20th, 2023 */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family:'Times New Roman', Times, serif;
+  background-color: #282634;
+  text-align: center;
+}
+
+header {
+  width: 10px;
+  height: 10px;
+
+}
+p {
+  margin: 0;
+}
+
+/* header css */
+
+#navigation-toggle {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  opacity: 0;
+  visibility: visible;
+} /* This allows you to hide the navigation button input */
+
+/* Show the menu when the navigation button is clicked */
+#navigation-toggle:checked ~ .menu {
+  opacity: 100;
+  visibility: visible;
+}
+
+
+/* Animations that appear when you click the navigation button */
+#navigation-toggle:checked ~ .menu .menu-nav-link span div,
+#navigation-toggle:checked ~ .menu img,
+#navigation-toggle:checked ~ .menu .title p {
+  transform: translateY(0);
+  transition: 1.2s 0.1s cubic-bezier(0.35, 0, 0.07, 1);
+}
+
+
+/* Applies delay to the images */
+#navigation-toggle:checked ~ .menu .image-link:nth-child(1) img {
+  transition-delay: 0.18s;
+}
+
+#navigation-toggle:checked ~ .menu .image-link:nth-child(2) img {
+  transition-delay: 0.26s;
+}
+
+#navigation-toggle:checked ~ .menu .image-link:nth-child(3) img {
+  transition-delay: 0.34s;
+}
+
+#navigation-toggle:checked ~ .menu .image-link:nth-child(4) img {
+  transition-delay: 0.42s;
+}
+#navigation-toggle:checked ~ .menu .image-link:nth-child(5) img {
+  transition-delay: 0.50s;
+}
+
+/* Makes a line appear underneat the menu items */
+#navigation-toggle:checked ~ .navigation-menu .line::after {
+  transform: translateX(0);
+  background-color: #FF4057;
+}
+
+/* Menu icon navigation */
+#navigation-toggle:checked ~ .navigation-menu .line:nth-child(1) {
+  transform: translateY(calc(var(--navigation-menu-radius) / 5)) rotate(45deg);
+}
+
+#navigation-toggle:checked ~ .navigation-menu .line:nth-child(2) {
+  transform: scaleX(0);
+}
+
+#navigation-toggle:checked ~ .navigation-menu .line:nth-child(3) {
+  transform: translateY(calc(var(--navigation-menu-radius) / -5)) rotate(-45deg);
+}
+
+/* Navigation menu styling */
+.navigation-menu {
+  --navigation-menu-radius: 4em;
+  position: fixed;
+  top: 5vh;
+  left: 5vw;
+  z-index: 100;
+  display: block;
+  width: var(--navigation-menu-radius);
+  height: var(--navigation-menu-radius);
+  outline: none;
+  cursor: pointer;
+}
+
+/* Individual line styling*/
+.navigation-menu .line {
+  position: absolute;
+  left: 25%;
+  width: 50%;
+  height: 3px;
+  background: #dcdcdc;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+/* Individual line animations*/
+.navigation-menu .line:nth-child(1) {
+  top: 30%;
+}
+
+.navigation-menu .line:nth-child(2) {
+  top: 50%;
+}
+
+.navigation-menu .line:nth-child(3) {
+  top: 70%;
+}
+
+.navigation-menu .line::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-color-darker);
+  transform: translateX(-100%);
+  transition: 0.25s;
+}
+
+/* Line 2 and 3 transition delay*/
+.navigation-menu .line:nth-child(2)::after {
+  transition-delay: 0.1s;
+}
+
+.navigation-menu .line:nth-child(3)::after {
+  transition-delay: 0.2s;
+}
+
+/* The effect that shows up when you hover over the menu items */
+.navigation-menu:hover .line::after {
+  transform: translateX(0);
+}
+
+/* Menu Styling */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #282634;
+  opacity: 0;
+  overflow-x: hidden;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+/* Menu display styling */
+@media screen and (max-width: 750px) {
+  .menu {
+    display: block;
+  }
+}
+
+.menu-nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style-type: none;
+}
+
+@media screen and (max-width: 750px) {
+  .menu-nav {
+    flex-direction: column;
+  }
+}
+
+/* Individual Styling */
+.menu-nav-item {
+  flex: 1;
+}
+
+/* Menu link styling*/
+.menu-nav-link {
+  position: relative;
+  display: inline-flex;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+}
+
+.menu-nav-link span {
+  overflow: hidden;
+}
+
+.menu-nav-link span div {
+  transform: translateY(102%);
+}
+
+.menu-nav-link::after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #FF4057;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+
+.menu-nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Styling for the gallery images and logo*/
+.menu .gallery {
+  margin-top: 60px;
+  text-align: center;
+}
+
+/* Styling for the title */
+.menu .title {
+  font-size: 24px;
+  color: white;
+  overflow: hidden;
+}
+
+/* Styling for the p elements of the title*/
+.menu .title p {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transform: translateY(102%);
+}
+
+/* Image gallery styling*/
+.menu .images {
+  margin-top: 36px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 750px) {
+  .menu .images {
+    justify-content: center;
+  }
+}
+
+.menu .images .image-link {
+  width: 15vw;
+  margin: 0 12px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 750px) {
+  .menu .images .image-link {
+    width: 40vw;
+    margin: 0 12px 12px 0;
+  }
+}
+
+.menu .images .image-link .image {
+  position: relative;
+  transition: 0.6s;
+}
+
+.menu .images .image-link .image::before {
+  position: absolute;
+  content: attr(data-label);
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.menu .images .image-link:hover .image {
+  transform: scale(1.2);
+}
+
+.menu .images .image-link:hover .image::before {
+  opacity: 1;
+}
+
+.menu .images img {
+  height: 250px;
+  transform: translateY(102%);
+}
+
+/* Home CSS */
+
+.container {
+  width: 900px;
+  height: 450px;
+  border-radius: 30px;
+  background: #282634;
+  box-shadow: 15px 15px 30px #131118,
+             -15px -15px 30px #af8ddb;
+  text-align: center;
+} /* This is to style the container */
+
+p {
+  margin: 5%;
+  margin-top: 15px;
+  font-size: 25px;
+  font-weight: 100;
+  color: #DCDCDC;
+} /* This is to style the content inside of the container */
+
+/* Styling for the footer*/
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4%;
+  background-color: #191820;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+#myFooter {
+  font-size: small;
+}
+
+
