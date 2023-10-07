@@ -18,5 +18,11 @@ router.get('/project', function(req, res, next) {
 router.get('/service', function(req, res, next) {
   res.render('service', { title: 'Express' });
 });
+router.get("/partials/header", function (req, res, next) {
+  res.render("header", { title: "Header" });
+});
+router.get("/partials/footer", function (req, res, next) {
+  res.render("footer", { title: "footer" });
+});
 
 module.exports = router;
