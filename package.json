@@ -13,6 +13,17 @@
     "express": "^4.18.2",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1"
-  }
-
+  },
+  "description": "Portfolio Website created using Express.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imirza7/Portfolio-Website.git"
+  },
+  "author": "Ibtesam Mirza",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/imirza7/Portfolio-Website/issues"
+  },
+  "homepage": "https://github.com/imirza7/Portfolio-Website#readme"
 }
