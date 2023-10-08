@@ -7,16 +7,16 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 router.get('/contact', function(req, res, next) {
-  res.render('contact', { title: 'Express' });
+  res.render('contact', { title: 'Contact' });
 });
 router.get('/about', function(req, res, next) {
-  res.render('about', { title: 'Express' });
+  res.render('about', { title: 'About me' });
 });
 router.get('/project', function(req, res, next) {
-  res.render('project', { title: 'Express' });
+  res.render('project', { title: 'Project' });
 });
 router.get('/service', function(req, res, next) {
-  res.render('service', { title: 'Express' });
+  res.render('service', { title: 'Service' });
 });
 router.get("/partials/header", function (req, res, next) {
   res.render("header", { title: "Header" });
