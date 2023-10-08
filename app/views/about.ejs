@@ -4,7 +4,7 @@ Student's name: Ibtesam Mirza.
 Student ID: 301315915.
 Date: Septerber 20th, 2023
 -->
-<%- include ('./Partials/header.ejs') %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,10 +14,11 @@ Date: Septerber 20th, 2023
     <title>About</title>
 </head>
 <body>
+    <%- include ('./Partials/header.ejs') %>
     <div class="container">
         <h1>ABOUT ME</h1>
         <img src="/assets/images/png/Ibtesam.jpg" alt="Ibtesam's Image" id="myIMG">
-        <p>I'm Ibtesam, a software engineering student at Centennial College. 
+        <p id="me">I'm Ibtesam, a software engineering student at Centennial College. 
          I chose this course because I love problem solving and finding creative solutions to complex problems. 
          My goal is to become a software engineer that can use my creativity to produce innovative solutions. 
          In my spare time, I like to read books, explore new cafes, play badminton and take photos. 
